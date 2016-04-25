@@ -6,6 +6,5 @@
 !app/logs/.gitkeep
 /build/
 /vendor/
-/bin/
 /composer.phar
 /var
