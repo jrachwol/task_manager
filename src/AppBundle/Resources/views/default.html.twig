@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="Task manager ver. {{ app_version }}">
+    <meta name="author" content="ITPendent">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>
+            Lp.
+        </th>
+        <th>
+            Tytuł
+        </th>
+        <th>
+            Opis
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for task in tasks %}
+    <tr>
+        <td>
+            {{ loop.index }}
+        </td>
+        <td>
+            {{ task.title }}
+        </td>
+        <td>
+            {{ task.description }}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
